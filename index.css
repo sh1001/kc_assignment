@@ -90,14 +90,15 @@ section {
   background-image: url(./assets/images/bg-stars.svg);
   background-repeat: no-repeat;
   background-position: top;
-  margin-bottom: 120px;
+  margin-bottom: 3rem;
+  overflow: hidden;
 }
 
 .curve {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, 5%);
+  transform: translate(-50%, 0%);
   width: 200vw;
   height: 100vw;
   background-color: #6c48f0;
@@ -205,6 +206,7 @@ section {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-block: 3rem 2rem;
+  overflow: auto;
 }
 
 .step {
@@ -451,12 +453,19 @@ section {
     height: 300px;
     width: 300px;
   }
+  .update:nth-child(1) {
+    grid-column: auto;
+  }
 }
 
 @media (max-width: 400px) {
   .curve {
     width: 140vh;
     height: 100vh;
+  }
+  .curve2 {
+    width: 250vw;
+    height: 150vw;
   }
   .btn-custom {
     font-size: 14px;
