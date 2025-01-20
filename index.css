@@ -392,6 +392,13 @@ section {
   overflow: hidden;
 }
 
+#section7 > img {
+  width: 130px;
+  position: absolute;
+  top: 0;
+  transform: translateX(-15px);
+}
+
 @media (max-width: 1200px) {
   .navbar {
     padding: 1.5rem 8vw;
@@ -456,6 +463,10 @@ section {
   .update:nth-child(1) {
     grid-column: auto;
   }
+  #section7 > img {
+    width: 80px;
+    transform: translateX(-10px);
+  }
 }
 
 @media (max-width: 400px) {
@@ -477,5 +488,9 @@ section {
   .ambition > img {
     height: 200px;
     width: 200px;
+  }
+  #section7 > img {
+    width: 55px;
+    transform: translateX(-10px);
   }
 }
