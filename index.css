@@ -330,29 +330,45 @@ section {
   padding-block: 4rem;
 }
 
-.comments {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-  gap: 2.5rem;
-  margin-top: 2rem;
-  overflow: auto;
+.splide__list {
+  display: flex;
+  align-items: stretch;
+  margin-block: 3.2rem 1rem !important;
+}
+
+.splide__slide {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  transition: all ease-in 200ms;
 }
 
 .comment {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0px 6px 50px 0px #0000001a;
-  padding: 2rem;
-  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  flex-grow: 1;
 }
 
-.comment:nth-child(odd) {
-  grid-row: 1/11;
+.comment img {
+  width: 40px;
+  margin-bottom: 1rem;
 }
 
-.comment:nth-child(even) {
-  grid-row: 2/12;
+.comment p {
+  margin: 0.5rem 0;
+  flex-grow: 1;
+}
+
+.comment h5 {
+  margin-top: auto;
 }
 
 #section6 {
