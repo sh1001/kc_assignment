@@ -170,11 +170,11 @@
         </div>
       </div>
       <div class="d-flex align-items-center justify-content-center gap-4">
-        <h5 class="text-center m-3" style="cursor: pointer; color: #ff7361">
+        <h5 id="step-prev" class="step-controller disabled text-center m-3">
           <img src="./assets/images/left.svg" alt="left" />
           &nbsp;&nbsp; Previous Step
         </h5>
-        <h5 class="text-center m-3" style="cursor: pointer; color: #ff7361">
+        <h5 id="step-next" class="step-controller text-center m-3">
           Next Step &nbsp;&nbsp;
           <img src="./assets/images/right.svg" alt="right" />
         </h5>
@@ -410,8 +410,33 @@
         splide.on("updated", highlightCenterSlide);
         splide.on("mounted moved", highlightCenterSlide);
         highlightCenterSlide();
-
       });
+
+      function addControlToSteps() {
+        const prev = document.getElementById('step-prev');
+        const next = document.getElementById('step-next');
+
+        const step1 = document.getElementById('step1');
+        const step2 = document.getElementById('step2');
+
+        prev.addEventListener("click", () => {
+          if (prev.classList.contains("disabled")) return;
+          prev.classList.add("disabled")
+          next.classList.remove("disabled")
+
+          step1.classList.remove("moved")
+          step2.classList.remove("moved")
+        })
+        next.addEventListener("click", () => {
+          if (next.classList.contains("disabled")) return;
+          next.classList.add("disabled")
+          prev.classList.remove("disabled")
+          
+          step1.classList.add("moved")
+          step2.classList.add("moved")
+        })
+      }
+      addControlToSteps();
     </script>
   </body>
 </html>
